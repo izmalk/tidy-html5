@@ -1,0 +1,41 @@
+# This file configures Sourcecraft.
+
+# (Required)
+# The source package name, no spaces
+name: tidy-html5
+
+# (Required)
+# The source package version
+version: 5.9.20
+
+# (Required)
+# Version of the build base OS
+base: ubuntu@24.04
+
+# (Recommended)
+# SPDX license identifier or 'proprietary' value
+# More information available at https://spdx.org/licenses/
+license: HTMLTIDY
+
+# (Recommended)
+title: HTML Tidy
+
+# (Required)
+summary: Granddaddy of HTML tools, with support for modern standards.
+
+# (Required)
+description: |
+  Tidy is a console application for macOS, Linux, Windows, UNIX, and more. It
+  corrects and cleans up HTML and XML documents by fixing markup errors and
+  upgrading legacy code to modern standards.
+
+# (Required)
+# Platforms that package targets
+platforms:
+  amd64:
+  arm64:
+
+parts:
+  tidy-html5:
+    plugin: cmake
+    source: .
